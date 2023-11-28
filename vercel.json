@@ -10,6 +10,21 @@
       {
         "src": "/(.*)",
         "dest": "/server.js"
+      },
+      {
+        "src": "/allStatus",
+        "methods": ["GET"],
+        "headers": ["Origin", "Accept", "Content-Type"]
+      },
+      {
+        "src": "/setStatus",
+        "methods": ["POST"],
+        "headers": ["Origin", "Accept", "Content-Type"]
+      },
+      {
+        "src": "/lastStatus",
+        "methods": ["GET"],
+        "headers": ["Origin", "Accept", "Content-Type"]
       }
     ]
   }
