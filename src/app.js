@@ -6,7 +6,15 @@ import { PrismaClient } from '@prisma/client';
 const app = express();
 const prisma = new PrismaClient();
 
-app.use(cors());
+// const corsOptions = {
+//   origin: 'https://cpd-monitoring-dashboard.vercel.app', // Substitua pelo domínio real do seu frontend
+//   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//   credentials: true,
+//   optionsSuccessStatus: 204,
+// };
+
+// app.use(cors(corsOptions));
+
 app.use(bodyParser.json());
 
 app.post('/setStatus', async (req, res) => {
