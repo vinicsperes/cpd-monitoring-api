@@ -1,6 +1,5 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import cors from 'cors';
 import { PrismaClient } from '@prisma/client';
 
 const app = express();
@@ -12,8 +11,6 @@ const prisma = new PrismaClient();
 //   credentials: true,
 //   optionsSuccessStatus: 204,
 // };
-
-app.use(cors);
 
 app.use(bodyParser.json());
 
